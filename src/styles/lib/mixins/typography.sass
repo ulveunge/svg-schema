@@ -1,0 +1,282 @@
+//не забыть добавить новые разрешения планшетов
+=heading($suffix: h1)
+  font-family: $font-family-proto-regular
+  font-style: normal
+  font-weight: 400
+  color: #1D1D1D
+  @if $suffix == h1
+    line-height: 46px
+    font:
+      size: 44px
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+      line-height: 40px
+      font-size: 36px
+    @media screen and (min-width: 320px) and (max-width: 767px)
+      line-height: 36px
+      font-size: 32px
+
+  @if $suffix == h2
+    line-height: 36px
+    font:
+      size: 32px
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+      line-height: 32px
+      font-size: 28px
+    @media screen and (min-width: 320px) and (max-width: 767px)
+      line-height: 28px
+      font-size: 24px
+
+  @if $suffix == h3
+    line-height: 28px
+    font:
+      size: 24px
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+      line-height: 24px
+      font-size: 20px
+    @media screen and (min-width: 320px) and (max-width: 767px)
+      line-height: 22px
+      font-size: 18px
+
+  @if $suffix == h4
+    line-height: 24px
+    font:
+      size: 20px
+    @media screen and (min-width: 320px) and (max-width: 767px)
+      line-height: 20px
+      font-size: 16px
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+      line-height: 22px
+      font-size: 18px
+
+  @if $suffix == subtitle
+    line-height: 24px
+    color: #747474
+    font:
+      family: $font-family-suisse-regular
+      size: 18px
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+      line-height: 24px
+      font-size: 18px
+    @media screen and (min-width: 320px) and (max-width: 767px)
+      line-height: 22px
+      font-size: 16px
+
+=controls($suffix: l)
+  font-family: $font-family-suisse-medium
+  font-weight: 500
+  font-style: normal
+  color: #1D1D1D
+  @if $suffix == l
+    line-height: 24px
+    font:
+      size: 16px
+  @else if $suffix == m
+    line-height: 20px
+    font:
+      size: 14px
+  @else if $suffix == s
+    line-height: 16px
+    font:
+      size: 14px
+  @else if $suffix == xs
+    line-height: 16px
+    font:
+      size: 12px
+  @else if $suffix == xxs
+    line-height: 12px
+    font:
+      size: 10px
+  @else
+    line-height: 22px
+
+=body($suffix: p1)
+  font-family: $font-family-suisse-regular
+  font-weight: 400
+  @if $suffix == p1
+    line-height: 24px
+    font:
+      size: 16px
+  @else if $suffix == p2
+    line-height: 22px
+    font:
+      size: 14px
+  @else if $suffix == p3
+    line-height: 18px
+    font:
+      size: 12px
+  @else
+    line-height: 24px
+
+=bold($suffix: l)
+  font-family: $font-family-suisse-bold
+  font-weight: 700
+  @if($suffix == xl)
+    font-size: 32px
+    line-height: 40px
+  @if($suffix == l)
+    font-size: 32px
+    line-height: 40px
+  @if($suffix == m)
+    font-size: 28px
+    line-height: 32px
+  @if($suffix == s)
+    font-size: 16px
+    line-height: 24px
+  @if($suffix == sl)
+    font-weight: 600
+    font-size: 16px
+    line-height: 24px
+
+// аналог cards из ui figma
+=mag($suffix: l)
+  font-family: $font-family-proto-regular
+  font-style: normal
+  font-weight: 700
+  line-height: 28px
+  letter-spacing: -0.5px
+  @if $suffix == l
+    font:
+      size: 22px
+
+=other($suffix: mp)
+  font-style: normal
+  font-weight: 400
+  color: #1D1D1D
+  // Mainpage_Heading
+  @if $suffix == mp
+    font-family: $font-family-proto-regular
+    line-height: 70.4px
+    font-size: 64px
+    @media screen and (min-width: 768px) and (max-width: 1439px)
+      line-height: 46px
+      font-size: 44px
+    @media screen and (min-width: 320px) and (max-width: 767px)
+      line-height: 26.4px
+      font-size: 24px
+  // Menu
+  @if $suffix == mn
+    font-family: $font-family-suisse-medium
+    line-height: 22px
+    font-weight: 500
+    font-size: 16px
+  //Main search by city
+  @if $suffix == ms
+    @media screen and (max-width: 767px)
+      font-size: 24px
+      line-height: 26.4px
+    @media screen and (min-width: 768px)and (max-width: 1023px)
+      font-size: 36px
+      line-height: 40px
+    @media screen and (min-width: 1024px)and (max-width: 1439px)
+      font-size: 32px
+      line-height: 36px
+    @media screen and (min-width: 1440px)
+      font-size: 44px
+      line-height: 46px
+
+=cards($suffix: l)
+  font-family: $font-family-proto-regular
+  font-size: 22px
+  font-weight: 700
+  line-height: 28px
+  letter-spacing: -0.5px
+  color: rgba(29, 29, 29, 1)
+
+=clamp-text($lines)
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: $lines
+  overflow: hidden
+  text-overflow: ellipsis
+
+=italic($suffix: l)
+  font-family: $font-family-suisse-bold
+  font-weight: 700
+  font-style: italic
+  @if($suffix == l)
+    font-size: 32px
+    line-height: 40px
+  @if($suffix == m)
+    font-size: 28px
+    line-height: 32px
+  @if($suffix == s)
+    font-size: 16px
+    line-height: 24px
+  @if($suffix == p1)
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+  @if($suffix == p2)
+    font-weight: 400
+    font-size: 14px
+    line-height: 22px
+  @if($suffix == p3)
+    font-weight: 400
+    font-size: 12px
+    line-height: 18px
+
+=mainPage($suffix: title)
+  font-family: $font-family-proto-regular
+  font-style: normal
+  font-weight: 400
+  line-height: 110px
+  letter-spacing: -0.6px
+  @if $suffix == title
+    font:
+      size: 100px
+    @media screen and (max-width: 767px)
+      font-size: 32px
+      line-height: 36px
+      letter-spacing: 0
+    @media screen and (min-width: 768px)and (max-width: 1023px)
+      font-size: 36px
+      line-height: 40px
+      letter-spacing: 0
+    @media screen and (min-width: 1024px)and (max-width: 1439px)
+      font-size: 44px
+      line-height: 46px
+      letter-spacing: 0
+    @media screen and (min-width: 1440px)and (max-width: 1919px)
+      font-size: 64px
+      line-height: 75px
+      letter-spacing: -0.6px
+
+  @if $suffix == city
+    line-height: 70px
+    font:
+      size: 64px
+    @media screen and (max-width: 767px)
+      font-size: 32px
+      line-height: 36px
+      letter-spacing: 0
+    @media screen and (min-width: 768px)and (max-width: 1023px)
+      font-size: 36px
+      line-height: 40px
+      letter-spacing: 0
+    @media screen and (min-width: 1024px)and (max-width: 1919px)
+      font-size: 44px
+      line-height: 46px
+      letter-spacing: 0
+    @media screen and (min-width: 1920px)
+      font-size: 64px
+      line-height: 70px
+      letter-spacing: 0
+  @if $suffix == cards
+    font-family: $font-family-suisse-regular
+    line-height: 100%
+    letter-spacing: 0
+    font:
+      weight: 600
+      size: 28px
+    @media screen and (max-width: 767px)
+      font-weight: 500
+      font-size: 14px
+      line-height: 16px
+    @media screen and (min-width: 768px)and (max-width: 1023px)
+      font-weight: 500
+      font-size: 16px
+      line-height: 100%
+    @media screen and (min-width: 1024px)and (max-width: 1918px)
+      font-size: 24px
+      font-weight: 500
+      line-height: 100%

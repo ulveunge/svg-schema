@@ -1,0 +1,44 @@
+$grid-config: (xxs: (bp-width: 0px,container-width: 100%,gutter: 16px, cols: 12 ),xs: (bp-width: 320px,container-width: 100%,gutter: 16px, cols: 12 ),sm: (bp-width: 360px,container-width: 100%,gutter:16px, cols: 12),md: (bp-width: 766px,container-width: 696px,gutter: 12px, cols: 12 ),l: (bp-width: 1022px,container-width: 928px,gutter: 12px, cols: 12 ),xl: (bp-width: 1436px,container-width:1272px,gutter: 24px, cols: 12),xxl: (bp-width: 1918px,container-width:1484px,gutter: 24px, cols: 12))
+
+@function get-grid-param($bp, $param)
+  @return map-get(map-get($grid-config, $bp), $param)
+
+@mixin mediamin($bp)
+  @media only screen and (min-width: get-grid-param($bp, "bp-width") + 1)
+    @content
+
+@mixin mediamax($bp)
+  @media only screen and (max-width: get-grid-param($bp, "bp-width"))
+    @content
+
+@mixin mediaminmax($bp1, $bp2)
+  @media only screen and (min-width: get-grid-param($bp1, "bp-width") + 1) and (max-width: get-grid-param($bp2, "bp-width"))
+    @content
+
+%container
+  margin: 0 auto
+
+@each $bp, $params in $grid-config
+  $grid_cols: get-grid-param($bp, "cols")
+
+  %row
+
+    +mediamin($bp)
+      display: grid
+      grid-template-columns: repeat($grid_cols, 1fr)
+      grid-column-gap: get-grid-param($bp, "gutter")
+      grid-row-gap: 0
+
+  %container
+    +mediamin($bp)
+      width: get-grid-param($bp, "container-width") !important
+      padding-left: get-grid-param($bp, "gutter")
+      padding-right: get-grid-param($bp, "gutter")
+
+  @for $i from 1 through $grid_cols
+    %col-start-#{$bp}-#{$i}
+      +mediamin($bp)
+        grid-column-start: $i + 1
+    %col-#{$bp}-#{$i}
+      +mediamin($bp)
+        grid-column-end: span $i

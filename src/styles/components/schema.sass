@@ -1,0 +1,332 @@
+.seats-svg
+  height: 570px
+
+  svg
+    height: 570px
+    width: auto
+
+.seats-svg.seats-svg--movie svg
+  height: 550px
+  overflow: visible
+  padding: 20px
+
+.seats-svg svg > text,
+.seats-svg g:not([data-id]) > text
+  fill: $color-natural-3 !important
+
+.seats-svg g
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+
+  text
+    stroke-width: 0
+    font-family: $font-family-suisse-medium !important
+
+  polygon, path, circle
+    stroke-width: 0.7
+
+.seats-svg g[data-id]:not(.svgPointSelected) text
+  display: none
+
+.seats-svg g[data-id] text
+  transform: translate(0, -0.5px)
+
+.seats-svg .places > g > rect
+  height: 12px
+
+.seats-svg path[style*="stroke:#000000;"]
+  stroke: $color-natural-7 !important
+
+.seats-svg path[style*="fill:#737373;"],
+.seats-svg path[class*="st1"]
+  fill: $color-gray-natural-6 !important
+
+.seats-svg path[class*="st0"]
+  stroke: $color-natural-7 !important
+
+.seats-svg g[id^="Легенда"]
+  > path
+    fill: $color-gray-natural-6 !important
+
+  g[id^="Подложка"],
+  g[id^="Контуры"]
+    path
+      fill: #fff !important
+      stroke: $color-natural-7 !important
+      stroke-width: 4
+
+.seats-svg g > g:not([id^="Легенда"]):not([id^="Контуры"]) > path
+  fill: #fff !important
+  stroke: $color-natural-7 !important
+  stroke-width: 4
+
+.seats-svg .unavailable
+  polygon, path, circle, rect
+    cursor: not-allowed !important
+    fill: #EBEBEB !important
+  text
+    cursor: not-allowed !important
+    fill: transparent !important
+
+.seat-category-0
+  polygon, path, circle, text, rect
+    fill: #FF9503
+    stroke: #FF9503
+.seat-category-1
+  polygon, path, circle, text, rect
+    fill: #0370C7
+    stroke: #0370C7
+.seat-category-2
+  polygon, path, circle, text, rect
+    fill: #FF3000
+    stroke: #FF3000
+.seat-category-3
+  polygon, path, circle, text, rect
+    fill: #9C019C
+    stroke: #9C019C
+.seat-category-4
+  polygon, path, circle, text, rect
+    fill: #E78F85
+    stroke: #E78F85
+.seat-category-5
+  polygon, path, circle, text, rect
+    fill: #007470
+    stroke: #007470
+.seat-category-6
+  polygon, path, circle, text, rect
+    fill: #73C0E7
+    stroke: #73C0E7
+.seat-category-7
+  polygon, path, circle, text, rect
+    fill: #E050BC
+    stroke: #E050BC
+.seat-category-8
+  polygon, path, circle, text, rect
+    fill: #F66940
+    stroke: #F66940
+.seat-category-9
+  polygon, path, circle, text, rect
+    fill: #84C7C4
+    stroke: #84C7C4
+.seat-category-10
+  polygon, path, circle, text, rect
+    fill: #9747FF
+    stroke: #9747FF
+.seat-category-11
+  polygon, path, circle, text, rect
+    fill: #E3B86F
+    stroke: #E3B86F
+.seat-category-12
+  polygon, path, circle, text, rect
+    fill: #B21500
+    stroke: #B21500
+.seat-category-13
+  polygon, path, circle, text, rect
+    fill: #2DAD86
+    stroke: #2DAD86
+.seat-category-14
+  polygon, path, circle, text, rect
+    fill: #BF5BBF
+    stroke: #BF5BBF
+.seat-category-15
+  polygon, path, circle, text, rect
+    fill: #FFBA5C
+    stroke: #FFBA5C
+.seat-category-16
+  polygon, path, circle, text, rect
+    fill: #014D89
+    stroke: #014D89
+.seat-category-17
+  polygon, path, circle, text, rect
+    fill: #76B9DC
+    stroke: #76B9DC
+.seat-category-18
+  polygon, path, circle, text, rect
+    fill: #8556C1
+    stroke: #8556C1
+.seat-category-19
+  polygon, path, circle, text, rect
+    fill: #6AE4BF
+    stroke: #6AE4BF
+.seat-category-20
+  polygon, path, circle, text, rect
+    fill: #981000
+    stroke: #981000
+.seat-category-21
+  polygon, path, circle, text, rect
+    fill: #FFE67C
+    stroke: #FFE67C
+.seat-category-22
+  polygon, path, circle, text, rect
+    fill: #EB8ED4
+    stroke: #EB8ED4
+.seat-category-23
+  polygon, path, circle, text, rect
+    fill: #5AA5A2
+    stroke: #5AA5A2
+.seat-category-24
+  polygon, path, circle, text, rect
+    fill: #5D544C
+    stroke: #5D544C
+.seat-category-25
+  polygon, path, circle, text, rect
+    fill: #BC88FF
+    stroke: #BC88FF
+.seat-category-26
+  polygon, path, circle, text, rect
+    fill: #FF795A
+    stroke: #FF795A
+.seat-category-27
+  polygon, path, circle, text, rect
+    fill: #79A1C1
+    stroke: #79A1C1
+.seat-category-28
+  polygon, path, circle, text, rect
+    fill: #CD685A
+    stroke: #CD685A
+.seat-category-29
+  polygon, path, circle, text, rect
+    fill: #77CAB1
+    stroke: #77CAB1
+.seat-category-30
+  polygon, path, circle, text, rect
+    fill: #91347A
+    stroke: #91347A
+.seat-category-31
+  polygon, path, circle, text, rect
+    fill: #D27B02
+    stroke: #D27B02
+.seat-category-32
+  polygon, path, circle, text, rect
+    fill: #1A664F
+    stroke: #1A664F
+.seat-category-33
+  polygon, path, circle, text, rect
+    fill: #EE4720
+    stroke: #EE4720
+.seat-category-34
+  polygon, path, circle, text, rect
+    fill: #014D89
+    stroke: #014D89
+.seat-category-35
+  polygon, path, circle, text, rect
+    fill: #DA3ADA
+    stroke: #DA3ADA
+.seat-category-36
+  polygon, path, circle, text, rect
+    fill: #55817F
+    stroke: #55817F
+.seat-category-37
+  polygon, path, circle, text, rect
+    fill: #A8A39F
+    stroke: #A8A39F
+.seat-category-38
+  polygon, path, circle, text, rect
+    fill: #CB5635
+    stroke: #CB5635
+.seat-category-39
+  polygon, path, circle, text, rect
+    fill: #0CC68D
+    stroke: #0CC68D
+.seat-category-40
+  polygon, path, circle, text, rect
+    fill: #F138C0
+    stroke: #F138C0
+.seat-category-41
+  polygon, path, circle, text, rect
+    fill: #76B9DC
+    stroke: #76B9DC
+.seat-category-42
+  polygon, path, circle, text, rect
+    fill: #582994
+    stroke: #582994
+.seat-category-43
+  polygon, path, circle, text, rect
+    fill: #4BA187
+    stroke: #4BA187
+.seat-category-44
+  polygon, path, circle, text, rect
+    fill: #D2AA07
+    stroke: #D2AA07
+.seat-category-45
+  polygon, path, circle, text, rect
+    fill: #D22800
+    stroke: #D22800
+.seat-category-46
+  polygon, path, circle, text, rect
+    fill: #59ACF0
+    stroke: #59ACF0
+.seat-category-47
+  polygon, path, circle, text, rect
+    fill: #391A5F
+    stroke: #391A5F
+.seat-category-48
+  polygon, path, circle, text, rect
+    fill: #E8BAB4
+    stroke: #E8BAB4
+.seat-category-49
+  polygon, path, circle, text, rect
+    fill: #44A211
+    stroke: #44A211
+.seat-category-50
+  polygon, path, circle, text, rect
+    fill: #A25311
+    stroke: #A25311
+.seat-category-51
+  polygon, path, circle, text, rect
+    fill: #B99FDC
+    stroke: #B99FDC
+.seat-category-52
+  polygon, path, circle, text, rect
+    fill: #1711A2
+    stroke: #1711A2
+.seat-category-53
+  polygon, path, circle, text, rect
+    fill: #A2117E
+    stroke: #A2117E
+.seat-category-54
+  polygon, path, circle, text, rect
+    fill: #11A28C
+    stroke: #11A28C
+.seat-category-55
+  polygon, path, circle, text, rect
+    fill: #DD99DD
+    stroke: #DD99DD
+.seat-category-56
+  polygon, path, circle, text, rect
+    fill: #EE601A
+    stroke: #EE601A
+.seat-category-57
+  polygon, path, circle, text, rect
+    fill: #0CC1C5
+    stroke: #0CC1C5
+.seat-category-58
+  polygon, path, circle, text, rect
+    fill: #DC2E28
+    stroke: #DC2E28
+.seat-category-59
+  polygon, path, circle, text, rect
+    fill: #350CC5
+    stroke: #350CC5
+.seat-category-60
+  polygon, path, circle, text, rect
+    fill: #F99E83
+    stroke: #F99E83
+.seat-category-61
+  polygon, path, circle, text, rect
+    fill: #C5800C
+    stroke: #C5800C
+.seat-category-62
+  polygon, path, circle, text, rect
+    fill: #391A5F
+    stroke: #391A5F
+.seat-category-63
+  polygon, path, circle, text, rect
+    fill: #F0432D
+    stroke: #F0432D
+
+.circle-hover
+  opacity: 0
+  transition: 0.2s
