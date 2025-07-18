@@ -7,6 +7,7 @@ import { generateInputEntries, ViteEjsHotModuleReloadPlugin } from './config/vit
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  base: 'svg-schema',
   server: {
     host: true,
     open: true,
